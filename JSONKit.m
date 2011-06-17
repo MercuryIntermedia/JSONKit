@@ -97,6 +97,8 @@
 
 */
 
+#pragma GCC diagnostic ignored "-Wselector"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -497,6 +499,7 @@ struct JKEncodeState {
 + (id)serializeObject:(id)object options:(JKSerializeOptionFlags)optionFlags encodeOption:(JKEncodeOptionType)encodeOption block:(JKSERIALIZER_BLOCKS_PROTO)block delegate:(id)delegate selector:(SEL)selector error:(NSError **)error;
 - (id)serializeObject:(id)object options:(JKSerializeOptionFlags)optionFlags encodeOption:(JKEncodeOptionType)encodeOption block:(JKSERIALIZER_BLOCKS_PROTO)block delegate:(id)delegate selector:(SEL)selector error:(NSError **)error;
 - (void)releaseState;
+
 
 @end
 
